@@ -1,0 +1,260 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+
+	<style>
+
+	body{
+		background-color:  rgba(91, 197, 167, 0.2) !important;
+	}
+
+	.icon {
+		height: 100%;
+		width: 100%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.navbar-default{
+	      background-color: #5bc5a7 !important;
+				margin-top: 5px;
+				color: Blue;
+	}
+	.navbar-brand{
+		font-family: "Forte";
+	}
+
+	.services section {
+		text-align: center;
+	}
+
+	#row1{
+		background-color: orange;
+		margin-top:20px;
+		border-radius: 10px;
+	}
+
+	.panel-footer{
+		background-color: #5bc5a7 !important;
+		margin-top:20px;
+		border-radius: 10px !important;
+
+	}
+
+	#myCarousel
+	{
+		border-radius: 10px !important;
+	}
+
+	.btn-orange {
+	    background: red;
+	    color: #fff;
+	    text-shadow: 0 -1px 0 #c83400;
+	}
+
+	.btn {
+	    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	    display: inline-block;
+			padding: 4px 10px 4px;
+			margin-top: 10px;
+			line-height: 18px;
+			text-align: center;
+			cursor: pointer;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+	    box-shadow: inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);
+	}
+
+	.logo
+	{
+		height: 100%;
+		width: 68%;
+	}
+
+	.carouselimage
+	{
+		height: 400px !important;
+	}
+
+	.carousel-caption {
+    position: absolute;
+    z-index: 1;
+    display:table;
+    width:100%;
+    height:100%;
+		color: black;
+}
+
+.carousel-caption div {
+    display:table-cell;
+    vertical-align: middle;
+    text-align:center;
+}
+
+.trickcenter {
+    position: fixed;
+		top : 40%;
+		text-align: center;
+		margin-left: 650px;
+    transform: translate(-50%, -50%);
+		color: black !important;
+}
+.trickcenter1 {
+    position: fixed;
+		top : 40%;
+		text-align: center;
+		margin-left: 150px;
+    transform: translate(-50%, -50%);
+		color: black !important;
+}
+
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<title>Gadget Guru</title>
+	</head>
+	<body>
+	<div class="container">
+	<div class="row">
+		<nav class="navbar navbar-default">
+			<div class = "container-fluid">
+				<div class="navbar-header">
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#"> <img class="logo" src="Images/logo1.png" alt="logo" > </a> &nbsp;
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li><a href="#"><b>Home</b></a></li>
+						  <li><div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#laptop">Laptops</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#mobile">Mobile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#headphone">Headphone</a>
+                        </div>  </li>
+						<li><a href="#"><b>About Us</b></a></li>
+						<li><a href="#"><b>Contact</b></a></li>
+					</ul>
+			<form class="form-inline my-2 my-lg-3" id="formSearch">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
+	        <ul class="nav navbar-nav navbar-right">
+	          <a class="btn btn-orange" href="#">Log in</a>
+	          <a class="btn btn-orange" href="#">Sign up</a>
+	        </ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img class="carouselimage" src="Images/i1.jpg" alt="image1">
+								<div class="carousel-caption trickcenter">
+									<h1> Welcome to the World of Gadgets!</h1>
+									<h1> Be a Gadget Guru </h1>
+								</div>
+							</div>
+
+							<div class="item">
+								<img class="carouselimage" src="Images/i5.png" alt="image2">
+								<div class="carousel-caption trickcenter">
+									<h2> Always the Best Gadgets </h2>
+									<h3> Be the first to Buy the Latest Gadgets</h3>
+								</div>
+							</div>
+
+							<div class="item">
+								<img class="carouselimage" src="Images/i2.jpg" alt="image3">
+								<div class="carousel-caption trickcenter">
+									<h2> Provide reviews and take trial->Gadgets </h2>
+										<h3> Easily</h3>
+										<h3> Quickly</h3>
+										<h3> For Free</h3>
+								<a href="#" class="btn btn-large btn-orange">
+    						Get started now
+    						<div id="its_free">(it's your Time!)</div>
+  							</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id ="row1">
+				<div class="col-lg-1">
+				</div>
+				<div class="col-lg-3">
+						<img class="image" style="margin-top:50px" src="images/i6.jpg" alt="image">
+				</div>
+
+				<div class="col-lg-4" style="text-align:center" >
+						<h3>The Best Gadgets Reviews, News, Popularity </h3>
+						<p><b>Users add their feedbacks, track usage and buying History, Rent Gadgets, Get the updated info and
+						 use messages to help others buying the Gadgets.</p>
+						<p>
+								Review of Xiaomi Roborock Robot Vacuum Cleaner 2nd Generation
+								Through out the year, Xiaomi Mi Robot Vacuum Cleaner had been doing very good job and still keeping up 
+								the sale since product released. It earned very good reputation on the market. 
+								In my opinion, the first generation was successful launched and the product was nearly perfect.</b></p>
+				</div>
+
+				<div class="col-lg-3">
+						<img class="image" style="margin-top:50px" src="images/i7.jpg" alt="image">
+				</div>
+				<div class="col-lg-1">
+				</div>
+			</div>
+
+		<div class="row">
+		<div class="panel-footer">
+			<p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+				2018 Gadget Guru. All rights reserved |
+				<a href="#">Terms and Conditions</a> |
+				<a href="#">Feedback</a>
+			</p>
+	  </div>
+	</div>
+
+	</div>
+	</body>
+	</html>

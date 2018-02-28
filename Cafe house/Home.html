@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> SOFÁ CAFÉ HOUSE </title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+		<link rel="stylesheet" type="text/css" href="layout1.css">
+		<style>
+			body{
+				background-color : rgb(200, 99, 71);
+				
+			}
+			
+			.name{
+				color : brown; 
+				font-style : bold;
+				text-align: center;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 500%;
+			}
+			
+			.welcome{
+				font-weight : bold;
+				font-style : bold;
+			}
+			ul{
+				list-style-type:none;
+				margin:10px;
+			
+			}
+			li{
+				float : left ;
+				width: 100px;
+				padding: 32px;
+				background-color:GREY;
+				font-size: 100%;
+				
+			
+			}
+			li a{
+				text-decoration:none;
+				display:block;
+				color:BLACK;		
+			}
+			li a:hover{
+				background-color:#FFCCCC;
+				color: white;
+				cursor: pointer;
+			}
+			
+@media only screen and (max-width: 1024px) {
+	body { margin: 0; image:block;}  
+	image { display: none;}
+	main { margin-left: 0; }
+	wrapper { float: none; 
+          width: 1024px; 
+		  text-align: left;
+		  position: left}
+	 ul,li { display: block; 
+               padding: 0.5em; 
+			   	float : left ;
+				width:1000px;
+				background-color:none;
+				font-size: 100%;
+			   text-align: left;
+			   position: left;
+			   text-align: left; }
+	 ul { text-align: left; }
+	 a { border-style: none; }
+	h1, h2 { font-size: 100%; }
+	p, welcome { font-size: 90%;text-align: left; 
+	position: left;
+	}
+} 
+@media only screen and (max-width: 768px and min-width: 350px) {
+body { margin: 0; image:block;}  
+	h1, h2 { font-size: 100%; }
+	body { image: none;}
+	p ,welcome { font-size: 80%; text-align: left; 
+	position: left;} 
+  	image { display: none;}
+ 	wrapper,  ul,p{ padding: 0;text-align: left;position:left; }
+ 	ul, li { display: block; float : left ;
+				width: 768px;
+				padding: 2px;
+				background-color:none;
+				font-size: 50%;}
+     a { display: block; 
+      	padding: 0em 0;
+ }
+    }
+			
+		</style>
+	</head>
+	<body>
+			<div id="wrapper">
+		<header>
+			<h1><center>SOFÁ CAFÉ HOUSE</center></h1>
+		</header>
+		
+		
+		<div class="headDiv">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li class ="menu"><a href="menu.html">MENU</a>
+					<div class="dropdown-content">
+						<a href="menu.html#drinks">DRINKS</a>
+						<a href="menu.html#foodmenu">FOOD MENU</a>
+						<a href="menu.html#desserts">DESSERTS</a>
+					</div>
+				</li>
+				<li><a href="aboutus.html">GALLERY</a></li>
+				<li><a href="jobs.html">CAREERS </a></li>
+			</ul>
+		</div>
+		
+		<div class="image">
+			<img src="coffeeImg3.jpg" alt="cafe logo"/>
+		</div>
+		
+		<div class="bodyDiv">
+			<p class="welcome">WELCOME TO SOFÁ CAFÉ HOUSE</p>
+			<p>FROM SEED TO THE CUP...</p>
+			<p>EXPERIENCE AND DIVE INTO THE WORLD OF SPECIALTY COFFEES!!!</p>
+		
+			<p>	A Traditional Tea Room, Coffee House and Restaurant...</p>
+			<p><b> Perfect place to Relax, Enjoy and make Memories!</b></p>
+				<h4>Locate Us</h4>
+				<address> 14 Temple Street </address>
+				<address> Framingham, MA - 07102 </address>
+		</div>
+		<div class="footDiv">
+			
+				<p>&copy 2018 Sofa Cafe House. All rights reserved | 
+				<a href="termsndconds.html">Terms and Conditions</a> |
+				<a href="Feedback.html">Feedback</a> | <a href="signup.html">Sign up</a></p>
+			
+		</div>
+
+	</body>
+</html>

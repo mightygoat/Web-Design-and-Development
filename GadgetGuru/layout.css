@@ -1,0 +1,50 @@
+@media screen and (max-width: 320px) {
+
+
+.carousel-inner .item img {
+    content: url("Images/i8.jpg") !important;
+}
+.trickcenter {
+    position: fixed;
+		top : 40%;
+		text-align: center;
+		margin-left: 110px;
+    transform: translate(-50%, -50%);
+		color: black !important;
+}
+.trickcenter1 {
+    position: fixed;
+		top : 40%;
+		text-align: center;
+		margin-left: 100px;
+    transform: translate(-50%, -50%);
+		color: black !important;
+}
+}
+
+@media screen and (min-width: 330px) and (max-width : 800px) {
+
+  .carouselimage
+  {
+    height: 443px !important;
+  }
+.carousel-inner .item img {
+    content: url("Images/i8.jpg") !important;
+}
+.trickcenter {
+    position: fixed;
+		top : 40%;
+		text-align: center;
+		margin-left: 190px;
+    transform: translate(-50%, -50%);
+		color: black !important;
+}
+.trickcenter1 {
+    position: fixed;
+		top : 40%;
+		text-align: center;
+		margin-left: 190px;
+    transform: translate(-50%, -50%);
+		color: black !important;
+}
+}

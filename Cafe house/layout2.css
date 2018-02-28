@@ -1,0 +1,282 @@
+.nameDiv{
+	background-color : #b86a6a;
+	width: 100%;
+    	height: 71px;
+	position: fixed;
+	color:#471f1f;
+	top:0px;
+	font-style : italic;
+	text-align: center;
+	font-family:  'Open Sans', sans-serif;
+				
+	font-size: 500%;
+	z-index: 4;
+}
+
+.menuDiv{
+	
+	position: fixed;
+    top:72px;
+    height: 100%;
+    width: 250px;
+	text-align: center;
+	
+}
+
+.menuDiv ul{
+	list-style-type:none;
+	margin:10px;
+}
+
+.menuDiv li{
+	float : left ;
+	width: 100px;
+	padding: 31px;
+	background-color:#FFCCCC;
+}
+
+.menuDiv li a{
+	text-decoration:none;
+	display:block;
+	color:brown;
+}
+
+.menuDiv li a:hover{
+	background-color:#996666;
+	color: white;
+	cursor: pointer;
+}
+
+.menuDiv li a:active {
+    color: blue;
+}
+
+.bodyHomeDiv{
+	
+	position: absolute;
+    top: 71px;
+    height: 150%;
+    width: 1005px;
+    left: 258px;
+	overflow : hidden; 
+	z-index :1 ;
+}
+
+.bodyDiv{
+	
+	position: absolute;
+    top: 71px;
+    height: 209%;
+    width: 1005px;
+    left: 258px;
+	overflow : hidden; 
+	z-index :1 ;
+}
+
+.imageHome{
+	height: 400 px;
+	width : 955px;
+	margin-top: 7px;
+	text-align: left;
+	left:300px;
+	
+}
+
+.imageHome img{
+	
+    width: 75%;
+}
+
+.navDiv{
+	
+	position: fixed;
+	top:500px;
+	width : 1021px;
+	left: 366px;
+	text-align: center;
+}
+
+.hotdrinks1Div{
+	width : 1000px;
+	height : 250px;
+}
+.img1Div{
+	float:left;
+	width : 35%;
+	height: 100%;
+}
+
+.img1Div img{
+	width : 100%;
+	height: 100%;	
+}
+
+.drinks1Div {
+	width : 65%;
+	height: 100%;
+	margin-left:350px;
+}
+
+.hotdrinks2Div{
+	
+	width : 1000px;
+	height : 350px;
+}
+
+.drinks2Div {
+	
+	float: left;
+	width : 60%;
+	height: 100%;
+	margin-left:0px;
+}
+
+.img2Div{
+	
+	width : 25%;
+	height: 100%;
+	margin-left:750px;
+}
+
+.img2Div img{
+	width : 100%;
+	height: 100%;	
+}
+
+.foodDiv{
+	width : 1000px;
+	height : 200px;
+}
+.img3Div{
+	float:left;
+	width : 35%;
+	height: 100%;
+}
+
+.img3Div img{
+	width : 100%;
+	height: 100%;	
+}
+
+.foodmenuDiv {
+	width : 65%;
+	height: 100%;
+	margin-left:350px;
+}
+
+.dessertsDiv{
+	
+	width : 1000px;
+	height : 150px;
+}
+
+.dessertmenuDiv {
+	
+	float: left;
+	width : 60%;
+	height: 100%;
+	margin-left:0px;
+}
+
+.img4Div{
+	
+	width : 25%;
+	height: 100%;
+	margin-left:750px;
+}
+
+.img4Div img{
+	width : 100%;
+	height: 100%;	
+}
+
+.footDiv{
+	background-color: #b87b7b;
+	position: fixed;
+	top: 571px;
+    width: 100%;
+	height: 46px;	
+	text-align: center;
+	color: white;
+	z-index: 3;
+}
+
+.aboutusDiv{
+	
+	margin-left:50px;
+	margin-top:50px;
+	height: 200px;
+}
+.image1Div{
+	
+	width : 50%;
+	height: 100%;
+	margin-left:0px;
+	float: left;
+}
+.image1Div img{
+	margin-left:131px;
+	width : 50%;
+	height: 100%;	
+}
+
+.image2Div{
+	
+	width : 50%;
+	height: 100%;
+	margin-left:300px;
+	
+}
+
+.image2Div img{
+	margin-left:-108px;
+	width : 50%;
+	height: 100%;	
+}
+
+.images {
+    width: 616px;
+    height: 370px;
+    overflow: hidden;
+    position: relative;
+	text-align :center;
+    margin: 20px auto;
+}
+.images img {
+    width: 616px;
+    height: 370px;
+
+    position: absolute;
+    top: 100;
+    left: -400px;
+    z-index: 1;
+    opacity: 0;
+
+    transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -webkit-transition: all linear 500ms;
+}
+.images img:target {
+    left: 0;
+    z-index: 9;
+    opacity: 1;
+}
+.images img:first-child {
+    left: 0;
+	opacity: 1;
+}
+
+.slider{
+	text-align : center;
+}
+.slider a {
+    text-decoration: none;
+    background: #E3F1FA;
+    border: 1px solid #C6E4F2;
+    padding: 4px 6px;
+    color: #222;
+}
+.slider a:hover {
+    background: #C6E4F2;
+}
