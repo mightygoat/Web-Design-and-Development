@@ -1,0 +1,243 @@
+<style>
+    .templateEvent label{
+	margin-left: 280px ;
+    margin-right: -50px;
+    color: #ffffff;
+}
+
+.templateEvent input{
+    margin-left: 250px ;
+    margin-right: -50px ;
+	
+}
+
+.templateLocation label{
+	margin-left: 50px ;
+    margin-right: -50px;
+    color: #ffffff;
+}
+
+.templateLocation input{
+
+    margin-left: 180px ;
+
+    margin-right: -80px ;
+}
+
+</style>
+
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '281192055652658',
+            xfbml: true,
+            version: 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<section id="about">
+
+    <div >
+       
+    </div>
+</section>
+
+<section id="explore">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h2>Search For Events </h2>
+            </div>
+            <div class="">
+                <form name="SearchEventForm" novalidate>
+                    <div class="row">
+                        <div class="templateLocation">
+                            <label for="location">Enter the Location</label>
+                            <input name=location
+                                   id="location"
+                                   type="text"
+                                   ng-model="location"
+                                   class="form-control col-md-6"
+                                   required
+                                   placeholder="Location"/>
+                            <div ng-show="SearchEventForm.location.$invalid && SearchEventForm.$submitted">
+                            <span class="error">
+                                Please enter a location!!
+                            </span>
+                            </div>
+                        </div>
+
+                        
+                        <div  class="templateEvent">
+
+                            <label for="eventname"> Event You Are Looking</label>
+                            
+                            <input name="eventname"
+                                   id="eventname"
+                                   type="text"
+                                   ng-model="event"
+                                   required
+                                   class="form-control "
+                                   placeholder="Event"/>
+                            <div ng-show="SearchEventForm.eventname.$invalid && SearchEventForm.$submitted">
+                            <span class="error">
+                             Please enter an event!!
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="col-lg-8 col-lg-offset-5">
+                        
+                    <button type="submit" ng-click="model.searchEvent(event,location,SearchEventForm)"
+                            class="btn btn-primary btn-block ">
+                        
+                        Search
+                    </button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div ng-if="!currentUser">
+    <section id="login">
+       
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Login </h2>
+                    <div ng-if="model.LoginError" class="alert alert-danger" role="alert">
+                        {{model.LoginError}}
+                    </div>
+                    <div ng-if="model.LoginSuccess" class="alert alert-info" role="alert">
+                        {{model.LoginSuccess}}
+                    </div>
+                    <form name="LoginForm" novalidate>
+                        <div class="form-group">
+                            <input name="username"
+                                   id="username"
+                                   type="text"
+                                   ng-model="username"
+                                   class="form-control"
+                                   required
+                                   placeholder="username"/>
+                            <div ng-show="LoginForm.username.$invalid && LoginForm.$submitted">
+                            <span class="error">
+                            Please enter a username
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input name="password"
+                                   id="password"
+                                   type="password"
+                                   ng-model="password"
+                                   required
+                                   class="form-control"
+                                   placeholder="password"/>
+                            <div ng-show="LoginForm.password.$invalid && LoginForm.$submitted">
+                            <span class="error">
+                                Please enter a password
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" ng-click="model.login(username,password,LoginForm)"
+                                    class="btn btn-primary btn-block ">
+                                Login
+                            </button>
+                            </a>
+                            
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2>Register </h2>
+                    <div ng-if="model.RegisterError" class="alert alert-danger" role="alert">
+                        {{model.RegisterError}}
+                    </div>
+                    <div ng-if="model.RegisterSuccess" class="alert alert-info" role="alert">
+                        {{model.RegisterSuccess}}
+                    </div>
+                    <form name="RegisterForm" novalidate>
+                        <div class="form-group">
+                            
+                            <input name="registername"
+                                   id="username1"
+                                   type="text"
+                                   ng-model="registername"
+                                   class="form-control"
+                                   required
+                                   placeholder="username"/>
+                            <div ng-show="RegisterForm.registername.$invalid && RegisterForm.$submitted">
+                            <span class="error">
+                            Please enter a username
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input name="registerpassword"
+                                   id="password1"
+                                   type="password"
+                                   ng-model="registerpassword"
+                                   required
+                                   class="form-control"
+                                   placeholder="password"/>
+                            <div ng-show="RegisterForm.registerpassword.$invalid && RegisterForm.$submitted">
+                            <span class="error">
+                                Please enter a password
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input name="verifypassword"
+                                   id="password2"
+                                   type="password"
+                                   ng-model="verifypassword"
+                                   required
+                                   class="form-control"
+                                   placeholder="Verify Password"/>
+                            <div ng-show="RegisterForm.verifypassword.$invalid && RegisterForm.$submitted">
+                            <span class="error">
+                                Please enter a password
+                            </span>
+                            </div>
+                            <div ng-if="model.passwordError">
+                            <span class="error">
+                                {{model.passwordError}}
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit"
+                                    ng-click="model.register(registername,registerpassword,emailid,RegisterForm)"
+                                    class="btn btn-primary btn-block">
+                                SignUp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+

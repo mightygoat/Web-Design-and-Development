@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div ng-if="model.success" class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <strong>Success!!</strong> {{model.success}}
+    </div>
+
+    <div ng-if="model.error" class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <strong>Error!!</strong> {{model.error}}
+    </div>
+    <div class="col-md-8" >
+        <h1 style="color:rgb(252, 247, 247)">Update Profile</h1>
+        <form name="profileForm" novalidate>
+            <div class="form-group">
+                <label for="username" style="color:rgb(252, 247, 247)">Username</label>
+                <input ng-model="model.user.username"
+                       type="text"
+                       class="form-control"
+                       id="username"
+                       placeholder="jsmith">
+            </div>
+            <div class="form-group">
+                <label for="email" style="color:rgb(252, 247, 247)">Email</label>
+                <input ng-model="model.user.email"
+                       type="email" class="form-control" id="email" placeholder="john@smith.com">
+            </div>
+            <div class="form-group">
+                <label for="firstName"style="color:rgb(252, 247, 247)">First Name</label>
+                <input ng-model="model.user.firstName"
+                       type="text"
+                       class="form-control"
+                       id="firstName"
+                       placeholder="John">
+            </div>
+            <div class="form-group">
+                <label for="lastName" style="color:rgb(252, 247, 247)">Last Name</label>
+                <input ng-model="model.user.lastName"
+                       type="text"
+                       class="form-control"
+                       id="lastName"
+                       placeholder="Smith">
+            </div>
+
+            <div class="form-group">
+                <label for="facebooklink" style="color:rgb(252, 247, 247)">Facebook Link</label>
+                <input ng-model="model.user.facebooklink"
+                       type="text"
+                       class="form-control"
+                       id="facebooklink"
+                       placeholder="https://www.facebook.com/">
+            </div>
+            <div class="form-group" style="color:rgb(252, 247, 247)">
+                <label for="linkedin">LinkedIn URL</label>
+                <input ng-model="model.user.linkedin"
+                       type="text"
+                       class="form-control"
+                       id="linkedin"
+                       placeholder="https://www.linkedin.com/">
+            </div>
+            <div class="form-group">
+                <label for="description" style="color:rgb(252, 247, 247)">Something about Me:</label>
+                <textarea class="form-control"
+                          rows="5"
+                          ng-model="model.user.description"
+                          id="description"></textarea>
+            </div>
+
+            <a class="btn btn-primary btn-block" ng-click="model.updateUser(model.user)">Update Profile</a>
+            <br><br> <br><br> 
+        </form>
+
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="profile-header-container">
+                <div class="profile-header-img">
+                    <img ng-if="model.user.url" class="img-circle" ng-src="{{model.user.url}}"/>
+                    <img ng-if="!model.user.url" class="img-circle" ng-src="../../../img/images/userlogo.png"/>
+                    <div class="rank-label-container">
+                        <span class="label label-default rank-label">{{model.user.username}}</span>
+                    </div>
+                </div>
+                <form action="/profile/uploads" method="post" enctype="multipart/form-data">
+                    Upload profile picture
+                    <input name="myFile" type="file" class="form-control"/>
+                    <input name="userId" value="{{model.user._id}}" style="display: none"/>
+                    <button type="submit" class="btn btn-block btn-primary">Upload Image</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Geek God Ecommerce Website</title>
+	<meta name="description" content="Geek God">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+body{
+	padding-top: 40px;
+}
+
+
+
+.carousel-inner img{
+  width:100%;
+  max-height: 600px !important;
+}
+.jumbotron {
+    background-color: #000000;
+
+}
+. mainContainer{
+background-color : #000000
+}
+
+.jumbotron h1{
+    color: #ffffff;
+
+}
+
+.jumbotron p{
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.learn-more{
+    background-color: #000000;
+}
+
+.line{
+	font-family: 'Tangerine', serif;
+	font-size: 20px;
+	line-height: 200%;
+}
+.socialmedia{
+	float:right;
+	font-size:20px;
+
+}
+
+.imgsize{
+	width: 300px ;
+	height: 300px;
+	margin:10px;
+}
+.fa {
+  padding: 15px;
+  font-size: 10px;
+  width: 15px;
+  length: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 4px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+.navbar-custom {
+    background-color:#229922;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+</style>
+
+<body data-spy="scroll" data-target="#my-navbar">
+
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">Geek God</a>
+				
+				
+			</div> <!-- Nav Header Ends here -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a>
+					<li><a href="#gallery">Gallery</a>
+					<li><a href="#features">Features</a>
+					<li><a href="#events">Event Gallery</a>
+					<li><a href="#socialmedia">Social Media</a>
+					<li><a href="#contact">ContactUs</a>
+				</ul>
+			</div>
+
+				
+
+		</div> <!-- Container Ends here -->
+	</nav> <!-- NavBar Ends here -->
+
+
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Geek God</h1>
+			<p>Level up your Game</p>
+
+			<div class="btn-group">
+				<a href="project/index.html"class="btn btn-lg btn-info">Geek Event</a>
+				<a href="NewsandExpert/NewsandExpert.html" class="btn btn-lg btn-info">News and Experts</a>
+				<a href="NewsandExpert/single.html" class="btn btn-lg btn-info">The  Blog</a>
+			</div>
+		</div> 
+	</div> 
+
+	
+	<div class="mainContainer">
+	<div class="container">
+			<div class="container text-center">
+		<section>
+			<div align="center" class="page-header" id="gallery">
+				<h2 align="center">In our collection!</h2>
+			</div>
+		</div>
+			<div class="carousel slide" id="screenshot-carousel" data=right="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="images/i1.jpg" alt="Picture Here">
+						<div class="carousel-caption">
+							<h3>The Gaming Kit</h3>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/i2.jpg" alt="Picture Here">
+						<div class="carousel-caption">
+							<h3>Mobile Deals</h3>
+							<p>Winter Sale 40% off </p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/i3.jpg" alt="Picture Here">
+						<div class="carousel-caption">
+							<h3>Best action Cams at best price</h3>
+						
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/i4.jpg" alt="Picture Here">
+						<div class="carousel-caption">
+							<h3>Geek God</h3>
+							<p>Level up your game</p>
+						</div>
+					</div>	
+				</div> 
+				<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div> <!-- Carousel ends here -->
+			
+		</section>
+	</div> <!-- container ends here -->
+	
+	<!-- Features -->
+
+	<div class="container">
+		<section>
+			<div class="page-header" id="features">
+				<h2>What are we!. <small>How we level up your gadgets!</small></h2>
+			</div> <!-- Header ends here -->
+			<div class="row">
+				
+								<div class="col-sm-4">
+									<div class="panel panel-default text-center">
+										<div class="panel body">
+											<span class="glyphicon glyphicon-ok"></span>
+											<h4>News and Features</h4>
+											<p>Fine the best products which are making noise in the market</p>
+										</div>
+									</div>
+								</div> <!-- Column ends here -->
+				
+								<div class="col-sm-4">
+									<div class="panel panel-default text-center">
+										<div class="panel body">
+											<span class="glyphicon glyphicon-star-empty"></span>
+											<h4>Our videos by experts</h4>
+											<p>Find expert commening on our work, their opinions and suggestions</p>
+										</div>
+									</div>
+								</div> <!-- Column ends here -->
+				
+								<div class="col-sm-4">
+									<div class="panel panel-default text-center">
+										<div class="panel body">
+											<span class="glyphicon glyphicon-star"></span>
+											<h4>Wanna become a reviewer?</h4>
+											<p>Apply for latest positions in our gadgets review team and take the plunge</p>
+										</div>
+									</div>
+								</div> 
+							</div> 
+			<div class="row">
+				<div class="col-sm-8">
+					<h3><a href="">Extraordinary electronics-gadgets</a></h3>
+					<p class="line"> We aim to offer our customers a variety of the latest gadgets. We've come a long way, so we know exactly which direction to take when supplying you with high quality yet budget friendly products. We offer all of this while providing excellent customer service and friendly support.
+					</p>
+				</div>
+				<div class="imgsize col-sm-4">
+					<img src="images/c1.jpg" class="img-responsive" alt="image">
+				</div> 
+			</div> 
+
+			<div class="row">
+				<div class="col-sm-8">
+					<h3><a href="">Our extraordinary services</a></h3>
+					<p class="line"> We always keep an eye on the latest trends in technology and put our customers wishes first. That is why we have satisfied customers all over the world, and are thrilled to be a part of the gaming industry.
+					</p>
+				</div>
+				<div class="imgsize col-sm-4">
+					<img src="images/c2.jpg" class="img-responsive" alt="image" >
+				</div> 
+			</div> <!-- Row ends here -->
+
+			<div class="row">
+				<div class="col-sm-8">
+					<h3><a href="">We blog latest trends</a></h3>
+					<p class="line">  The interests of our customers are always the top priority for us, so we hope you will enjoy our products as much as we enjoy making them available to you. </p>
+				</div>
+				<div class="imgsize col-sm-4">
+					<img src="images/c3.jpg" class="img-responsive" alt="image">
+				</div> 
+			</div> <!-- Row ends here -->
+
+			<div class="row">
+				<div class="col-sm-8">
+					<h3><a href="">Free Downloads</a></h3>
+					<p class="line">Download software, mobile apps and games
+						
+					</p>
+				</div>
+				<div class="imgsize col-sm-4">
+					<img src="images/c4.jpg" class="img-responsive" alt="image" >
+				</div> 
+			</div> <!-- Row ends here -->
+
+			<div class="row">
+				<div class="col-sm-8">
+					<h3><a href="">Find best products</a></h3>
+					<p class="line">Find the products that are right for you
+					</p>
+				</div>
+				<div class="imgsize col-sm-4">
+					<img src="images/c5.jpg" class="img-responsive" alt="image" >
+				</div> 
+			</div> <!-- Row ends here -->
+
+			
+
+		</section>
+	</div> <!-- Container ends here -->
+	
+	<div class="container">
+			<section>
+				<div class="page-header" id="events">
+					<h2>Our events. <small>How we are creating a revolution</small></h2>
+				</div> <!-- Header ends here -->
+		<div class="row"> 
+		
+				
+				<div class="column">
+						<img src="img2/img1.jpg" class="img-responsive" alt="image" >
+						<img src="img2/img2.jpg" class="img-responsive" alt="image" >
+						<img src="img2/img3.jpg" class="img-responsive" alt="image" >
+					</div>
+			
+			<div class="column">
+				<img src="img2/img4.jpg" class="img-responsive" alt="image" >
+				<img src="img2/img5.jpg" class="img-responsive" alt="image" >
+				<img src="img2/img6.jpg" class="img-responsive" alt="image" >
+			</div>
+			<div class="column">
+					<img src="img2/img7.jpg" class="img-responsive" alt="image" >
+					<img src="img2/img8.jpg" class="img-responsive" alt="image" >
+					<img src="img2/img9.jpg" class="img-responsive" alt="image" >
+				</div>
+				<div class="column">
+						<img src="img2/img10.jpg" class="img-responsive" alt="image" >
+						<img src="img2/img11.jpg" class="img-responsive" alt="image" >
+						<img src="img2/img12.jpg" class="img-responsive" alt="image" >
+				</div>
+		
+		  </div>
+	
+		</div>
+	
+
+<!-- Contact us -->
+	<div class="container">
+	
+		<section>
+		
+			<div class="page-header" id="contact">
+			
+							<div class="text-center">
+
+		<body>
+		
+		<div class="page-header" id="socialmedia">
+						
+		</div>
+			<!-- Add font awesome icons -->
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"><span class="badge"></span></a>
+			<a href="#" class="fa fa-google"><span class="badge"></span></a>
+			<a href="#" class="fa fa-linkedin"><span class="badge"></span></a>
+			<a href="#" class="fa fa-youtube"><span class="badge"></span></a>
+			<a href="#" class="fa fa-instagram"><span class="badge"></span></a>
+			<a href="#" class="fa fa-pinterest"><span class="badge"></span></a>
+			
+			
+			
+		</body>
+
+			</div> <!-- Header ends here -->
+			</div>
+			<div class="text-center">
+
+			<div class="row">
+	
+				</div>
+			</div>
+
+				
+
+			</div> <!-- row ends here -->
+
+		</section>
+	</div> <!-- container ends here -->
+	<div>
+
+
+	</div>
+</div>
+	<!-- Footer starts here -->
+
+	<footer>
+			<div class="text-center">
+				
+
+				<div class="container">
+					<p>For futher queries:</p>
+					<p><a href="mailto:geekgod@gmail.com">Email Us</a></p>
+					<p>&copy; Copyright @ 2018. Created by <strong> Geek God </strong>. All Rights Reserved</p>
+					<a href="project/Feedback.html">Feedback</a></p>
+
+				</div>
+				
+			</div> <!-- text-center ends here -->
+		
+	</footer>
+	
+	
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script> $('#screenshot-carousel').carousel({ interval: 3000 }) </script>﻿
+</body>
+</html>
