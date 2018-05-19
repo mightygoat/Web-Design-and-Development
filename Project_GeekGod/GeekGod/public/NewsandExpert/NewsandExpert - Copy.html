@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Geek God News Portal</title>
+	<meta name="description" content="Geek God">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+
+<meta charset="utf-8">
+	<title>Geek God News</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+body{
+	padding-top: 40px;
+}
+
+
+
+.carousel-inner img{
+  width:100%;
+  max-height: 600px !important;
+}
+.jumbotron {
+    background-color: #000000;
+
+}
+. mainContainer{
+background-color : #000000
+}
+
+.jumbotron h1{
+    color: #ffffff;
+
+}
+
+.jumbotron p{
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.learn-more{
+    background-color: #000000;
+}
+
+.line{
+	font-family: 'Tangerine', serif;
+	font-size: 20px;
+	line-height: 200%;
+}
+.socialmedia{
+	float:right;
+	font-size:20px;
+
+}
+
+.imgsize{
+	width: 300px ;
+	height: 300px;
+	margin:10px;
+}
+.fa {
+  padding: 15px;
+  font-size: 10px;
+  width: 15px;
+  length: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 4px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+.navbar-custom {
+    background-color:#229922;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+</style>
+
+<body data-spy="scroll" data-target="#my-navbar">
+
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="https://www.w3schools.com"></a>
+				<img src="images/gg.png" alt="Picture Here" height="50" width="50">
+				<a href=" " class="navbar-brand">Geek God</a>
+				
+				
+			</div> <!-- Nav Header Ends here -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#contact">ContactUs</a>
+				</ul>
+			</div>
+
+				
+
+		</div> <!-- Container Ends here -->
+	</nav> <!-- NavBar Ends here -->
+
+
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Geek God News Portal</h1>
+			<p>Level up your Game.</p>
+
+			<div class="btn-group">
+				<a href="../index.html" class="btn btn-lg btn-info">Geek Buy</a>
+				<a href="NewsandExpert.html" class="btn btn-lg btn-info">News Portal</a>
+				<a href="single.html" class="btn btn-lg btn-info">The  Blog</a>
+			</div>
+		</div> 
+	</div> 
+
+	
+	
+
+	</header>
+	<!-- END #fh5co-header -->
+	<div class="container-fluid">
+		<div class="row fh5co-post-entry">
+			<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+				<figure>
+					<a href="single.html"><img src="images/pic_1.jpg" alt="Image" class="img-responsive"></a>
+				</figure>
+				<span class="fh5co-meta"><a href="single.html">Robots &amp; Wars</a></span>
+				<h2 class="fh5co-article-title"><a href="single.html">Beaware Robots are coming!</a></h2>
+				<span class="fh5co-meta fh5co-date">March 6th, 2018</span>
+			</article>
+			<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+				<figure>
+					<a href="single.html"><img src="images/pic_2.jpg" alt="Image" class="img-responsive"></a>
+				</figure>
+				<span class="fh5co-meta"><a href="single.html">Tesla &amp; AI</a></span>
+				<h2 class="fh5co-article-title"><a href="single.html">Beef Steak at Guatian Restaurant</a></h2>
+				<span class="fh5co-meta fh5co-date">March 6th, 2018</span>
+			</article>
+			<div class="clearfix visible-xs-block"></div>
+			<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+				<figure>
+					<a href="single.html"><img src="images/pic_3.jpg" alt="Image" class="img-responsive"></a>
+				</figure>
+				<span class="fh5co-meta"><a href="single.html">TESLA</a>, <a href="single.html">World</a></span>
+				<h2 class="fh5co-article-title"><a href="single.html">An Overlooking River at the East Cost</a></h2>
+				<span class="fh5co-meta fh5co-date">March 6th, 2018</span>
+			</article>
+			<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+				<figure>
+					<a href="single.html"><img src="images/pic_4.jpg" alt="Image" class="img-responsive"></a>
+				</figure>
+				<span class="fh5co-meta"><a href="single.html">Best Laptops</a>, <a href="single.html">World</a></span>
+				<h2 class="fh5co-article-title"><a href="single.html">Dell is like 1992? Go buy Acer </a></h2>
+				<span class="fh5co-meta fh5co-date">March 6th, 2018</span>
+			</article>
+			
+	</div>
+
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+	
+		</div>
+	
+
+<!-- Contact us -->
+	<div class="container">
+	
+		<section>
+		
+			<div class="page-header" id="contact">
+			
+				<h2>Contact Us</h2>
+							<div class="text-center">
+
+		<body>
+		
+		<div class="page-header" id="socialmedia">
+						
+		</div>
+			<!-- Add font awesome icons -->
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"><span class="badge"></span></a>
+			<a href="#" class="fa fa-google"><span class="badge"></span></a>
+			<a href="#" class="fa fa-linkedin"><span class="badge"></span></a>
+			<a href="#" class="fa fa-youtube"><span class="badge"></span></a>
+			<a href="#" class="fa fa-instagram"><span class="badge"></span></a>
+			<a href="#" class="fa fa-pinterest"><span class="badge"></span></a>
+			
+			
+			
+		</body>
+
+			</div> <!-- Header ends here -->
+			</div>
+			<div class="text-center">
+
+			<div class="row">
+
+			
+					
+					<div class="container">
+					<p>POST US LETTERS</p>
+
+					<p> Geek God INC,
+						1922 Mozzil Street ,
+						Boston, MA,
+						02120,
+						P: +1-234-XXX-4456</p>
+					</div>
+				
+					
+					
+				</div>
+			</div>
+
+				
+
+			</div> <!-- row ends here -->
+
+		</section>
+	</div> <!-- container ends here -->
+	<div>
+
+
+	</div>
+</div>
+	<!-- Footer starts here -->
+	<footer>
+			<div class="text-center">
+				
+
+				<div class="container">
+					<p>&copy; Copyright @ 2018. Created by <strong> Shivam . Bhanuja. Deivakumaran </strong>. All Rights Reserved</p>
+				</div>
+				
+			</div> <!-- text-center ends here -->
+		
+	</footer>
+	
+	
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script> $('#screenshot-carousel').carousel({ interval: 3000 }) </script>﻿
+</body>
+</html>

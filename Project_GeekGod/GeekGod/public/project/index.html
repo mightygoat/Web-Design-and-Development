@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BookMyEvent">
+
+<head>
+	<title>Geek God Ecommerce Website</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Geek God">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+	<title> BookMyEvent </title>
+	
+ <!--Stylesheets-->
+ <link href="../css/bootstrap.min.css" rel="stylesheet">
+ <link href="../css/full-slider.css" rel="stylesheet">
+ <link href="../css/event-detail.css" rel="stylesheet">
+ <link href="../css/event-detail-page.css" rel="stylesheet">
+ <link href="../css/profile.css" rel="stylesheet">
+ <link href="../css/member-profile.css" rel="stylesheet">
+ <link href="../css/main.css" rel="stylesheet">
+ <link href="../css/responsive.css" rel="stylesheet">
+ <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+ <link href="../css/ng-rating.css" rel="stylesheet">
+
+ <!--loading angular-->
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+ <script src="app.js"></script>
+ <script src="config.js"></script>
+ <script src="../js/project-js/member-profile.js"></script>
+ <script src="../js/project-js/ng-rating.js"></script>
+
+ <script src="views/home/home.controller.client.js"></script>
+ <script src="views/event/event-search-list.controller.client.js"></script>
+ <script src="views/user/member-profile.controller.client.js"></script>
+ <script src="views/event/event-detail.controller.client.js"></script>
+ <script src="views/admin/admin.controller.client.js"></script>
+ <script src="views/user/profile.controller.client.js"></script>
+ <script src="services/event.service.client.js"></script>
+ <script src="services/user.service.client.js"></script>
+ <script src="services/comment.service.client.js"></script>
+ <script src="services/member-profile.service.client.js"></script>
+
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+body{
+	padding-top: 40px;
+}
+
+.containerBook span{
+	background-color: #000000;
+}
+
+.carousel-inner img{
+  width:100%;
+  max-height: 600px !important;
+}
+.jumbotron {
+    background-color: #000000;
+
+}
+.jumbotron1 {
+    background-color: #000000;
+
+}
+
+.jumbotron h1{
+    color: #ffffff;
+
+}
+
+.jumbotron p{
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.learn-more{
+    background-color: #000000;
+}
+
+.line{
+	font-family: 'Tangerine', serif;
+	font-size: 20px;
+	line-height: 200%;
+}
+.socialmedia{
+	float:right;
+	font-size:20px;
+
+}
+
+.imgsize{
+	width: 300px ;
+	height: 300px;
+	margin:10px;
+}
+.fa {
+  padding: 15px;
+  font-size: 10px;
+  width: 15px;
+  length: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 4px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+.navbar-custom {
+    background-color:#229922;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+</style>
+
+<body ng-controller="EventController as model" data-spy="scroll"  data-target="#my-navbar">
+
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+
+			
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav pull-right">
+				    <li><a href="../index.html">Geek God</a>
+					<li><a href="index.html">Book My Event</a>
+					<li><a href="#gallery">Gallery</a>
+				    <li ng-if="currentUser.role === 'admin'"> <a href="#/admin">Admin</a>
+					<li><a ng-click="model.scrollTo('about')">Search Events</a></li>
+				
+
+						
+					<li ng-if="!currentUser"><a ng-click="model.scrollTo('login')">Login/Register</a></li>
+					
+					<li ng-if="currentUser" >
+							<a class="dropdown-toggle"
+							   data-toggle="dropdown"
+							   href=""
+							   role="button"
+							   aria-haspopup="true"
+							   aria-expanded="false">
+								{{currentUser.username}} <span class="caret"></span> </a>
+					<ul class="dropdown-menu">
+								<li><a href="#/user/profile"><span class="">Profile</span></a></li>
+								<li><a href="#/user/project/profile/{{currentUser.username}}"><span
+										class=""></span>Activity Log</a></li>
+								<li><a ng-click="model.logout()"><span class=""></span>Logout</a></li>
+							</ul>
+					</li>
+						<li ng-if="currentUser" class="hidden-xs">
+							<img ng-if="currentUser.url" class="navigation img-circle img-responsive"
+								 ng-src="{{currentUser.url}}"/>
+							<img ng-if="!currentUser.url" class="navigation img-circle img-responsive"
+								 ng-src="../../../img/images/userlogo.png"/></li></li>
+						</ul>
+			</div>
+
+				
+		</div> <!-- Container Ends here -->
+	</nav> <!-- NavBar Ends here -->
+
+
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Geek God Events</h1>
+			<p>Level up your Game</p>
+
+			<!--<div class="btn-group">
+				<a href="#geekbuy" class="btn btn-lg btn-info">Search Events</a>
+				<a href="#geeknews" class="btn btn-lg btn-info">News and Experts</a>
+				<a href="#geekblog" class="btn btn-lg btn-info">The  Blog</a>
+			</div>-->		
+		</div> 
+	</div> 
+	
+	
+	<!-- to insert event brite-->
+
+	<div class="containerEvents">
+			<div class="container text-center">
+		<section>	
+		<div align="center" class="page-header" id="gallery">
+			<h2 align="center"></h2>
+		</div>
+	<div class="jumbotron1">
+		<span ng-view autoscroll="true">
+	  </span>
+	</div> 
+	</section>
+			</div>
+		</div>
+
+		<div class="container">
+				<div class="container text-center">
+			<section>
+				<div align="center" class="page-header" id="gallery">
+					<h2 align="center"> Book Tech Events!</h2>
+				</div>
+			</div>
+				<div class="carousel slide" id="screenshot-carousel" data=right="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+						<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+						<li data-target="#screenshot-carousel" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/event2.jpg" alt="Picture Here">
+							<div class="carousel-caption">
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/event3.jpg" alt="Picture Here">
+							<div class="carousel-caption">
+							
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/event4.png" alt="Picture Here">
+							<div class="carousel-caption">
+							
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/event5.jpg" alt="Picture Here">
+							<div class="carousel-caption">
+							</div>
+						</div>	
+					</div> 
+					<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div> <!-- Carousel ends here -->
+				
+			</section>
+		</div> <!-- container ends here -->
+
+	
+		
+		<!-- Features -->
+	
+		<div class="container">
+			<section>
+				<div class="page-header" id="features">
+				</div> <!-- Header ends here -->
+				
+				<div class="row">
+					<div class="col-sm-8">
+						<h3><a href="">What are we!.</a></h3>
+						<p class="line"> We brings people together through live experiences. Discover events that match your passions, or create your own with online ticketing tools.
+						</p>
+					</div>
+					<div class="imgsize col-sm-4">
+						<img src="images/c1.jpg" class="img-responsive" alt="image">
+					</div> 
+				</div> 
+	
+				<div class="row">
+					<div class="col-sm-8">
+						<h3><a href="">Our extraordinary services</a></h3>
+						<p class="line"> We always keep an eye on the latest trends in technology and put our customers wishes first. That is why we have satisfied customers all over the world, and are thrilled to be a part of the gaming industry.
+						</p>
+					</div>
+					<div class="imgsize col-sm-4">
+						<img src="images/tech2.jpg" class="img-responsive" alt="image" >
+					</div> 
+				</div> <!-- Row ends here -->
+	
+	
+			</section>
+		</div> <!-- Container ends here -->
+		
+		<div class="container">
+				<section>
+					<div class="page-header" id="events">
+						<h2>Our events. <small>How we are creating a revolution</small></h2>
+					</div> <!-- Header ends here -->
+			<div class="row"> 
+			
+					
+					<div class="column">
+							<img src="images/conf4.jpg" class="img-responsive" alt="image" >
+							<img src="images/conf5.jpg" class="img-responsive" alt="image" >
+							<img src="images/conf6.jpg" class="img-responsive" alt="image" >
+						</div>
+				
+				<div class="column">
+					<img src="images/conf4.jpg" class="img-responsive" alt="image" >
+					<img src="images/conf5.jpg" class="img-responsive" alt="image" >
+					<img src="images/conf6.jpg" class="img-responsive" alt="image" >
+				</div>
+				<div class="column">
+						<img src="images/conf4.jpg" class="img-responsive" alt="image" >
+						<img src="images/conf5.jpg" class="img-responsive" alt="image" >
+						<img src="images/conf6.jpg" class="img-responsive" alt="image" >
+					</div>
+					<div class="column">
+							<img src="images/conf4.jpg" class="img-responsive" alt="image" >
+							<img src="images/conf5.jpg" class="img-responsive" alt="image" >
+							<img src="images/conf6.jpg" class="img-responsive" alt="image" >
+					</div>
+			
+			  </div>
+		
+			</div>
+		
+	
+	<!-- Contact us -->
+		<div class="container">
+		
+			<section>
+			
+				
+								<div class="text-center">
+	
+			<body>
+			
+			<div class="page-header" id="socialmedia">
+							
+			</div>
+				<!-- Add font awesome icons -->
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"><span class="badge"></span></a>
+				<a href="#" class="fa fa-google"><span class="badge"></span></a>
+				<a href="#" class="fa fa-linkedin"><span class="badge"></span></a>
+				<a href="#" class="fa fa-youtube"><span class="badge"></span></a>
+				<a href="#" class="fa fa-instagram"><span class="badge"></span></a>
+				<a href="#" class="fa fa-pinterest"><span class="badge"></span></a>
+				
+				
+				
+			</body>
+	
+				</div> <!-- Header ends here -->
+			
+				<div class="text-center">
+				<div class="row">
+	
+				
+						
+						<div class="container">
+						
+						</div>
+					
+						
+						
+					</div>
+				</div>
+	
+					
+	
+				</div> <!-- row ends here -->
+	
+			</section>
+		</div> <!-- container ends here -->
+		<div>
+	
+	
+		</div>
+	</div>
+		<!-- Footer starts here -->
+		<footer>
+				<div class="text-center">
+					
+	
+					<div class="container">
+						<p>For futher queries:</p>
+						<p><a href="mailto:geekgod@gmail.com">Email Us</a></p>
+						<p>&copy; Copyright @ 2018. Created by <strong> Geek God </strong>. All Rights Reserved</p>
+					
+					</div>
+					
+				</div> <!-- text-center ends here -->
+			
+		</footer>
+		
+	
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script> $('#screenshot-carousel').carousel({ interval: 3000 }) </script>﻿
+
+
+<script src="../js/project-js/bootstrap.min.js"></script>
+			
+
+</body>
+</html>

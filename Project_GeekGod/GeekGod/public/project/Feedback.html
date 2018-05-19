@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Geek God Ecommerce Website</title>
+	<meta name="description" content="Geek God">
+
+
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+body{
+	padding-top: 40px;
+}
+
+
+
+.carousel-inner img{
+  width:100%;
+  max-height: 600px !important;
+}
+.jumbotron {
+    background-color: #000000;
+
+}
+
+.jumbotron h1{
+    color: #ffffff;
+
+}
+
+.jumbotron p{
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.learn-more{
+    background-color: #000000;
+}
+
+.line{
+	font-family: 'Tangerine', serif;
+	font-size: 20px;
+	line-height: 200%;
+}
+.socialmedia{
+	float:right;
+	font-size:20px;
+
+}
+
+.imgsize{
+	width: 300px ;
+	height: 300px;
+	margin:10px;
+}
+.fa {
+  padding: 15px;
+  font-size: 10px;
+  width: 15px;
+  length: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 4px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+.navbar-custom {
+    background-color:#229922;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+</style>
+<body data-spy="scroll" data-target="#my-navbar"></body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href=" " class="navbar-brand">Geek God</a>
+				</div> <!-- Nav Header Ends here -->
+	
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav pull-right">
+						<li><a href="#aboutus">Home</a>
+						<li><a href="project/index.html">Book My Event</a>
+						<li><a href="#gallery">Gallery</a>
+						<li><a href="#features">Features</a>
+						<li><a href="#events">Event Gallery</a>
+						<li><a href="#socialmedia">Social Media</a>
+						<li><a href="#contact">ContactUs</a>
+					</ul>
+				</div>
+	
+					
+	
+			</div> <!-- Container Ends here -->
+		</nav> <!-- NavBar Ends here -->
+	
+	</head>
+	<body>
+			<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href=" " class="navbar-brand">Geek God</a>
+			</div> <!-- Nav Header Ends here -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="../index.html">Home</a>
+					
+	
+				</ul>
+			</div>
+
+				
+
+		</div> <!-- Container Ends here -->
+	</nav> <!-- NavBar Ends here -->
+	<div class = "container text-center">
+		<h3 class="name">Feedback</h3>
+
+		<div class="feedbackDiv">
+		
+			<p>Your feedback helps us understand what we do well and where we can improve. </p>
+			<form class="form" name="feedbackForm">
+				<br>
+				<input class ="box" type="text" name="name" placeholder="Name"><br>
+				<br>
+				<br>
+				<input class ="box" type="text" name="email" placeholder="Email Id"><br>
+				<br>
+				Please describe your experience <br>
+				<br>
+				<input type="radio" name="Rating" value="Very Good">Very Good
+				<input type="radio" name="Rating" value="Good">Good
+				<input type="radio" name="Rating" value="Neutral">Neutral
+				<input type="radio" name="Rating" value="Poor">Poor
+				<input type="radio" name="Rating" value="Very Poor">Very Poor<br>
+				<br>
+				<br>
+				<textarea class ="box" style="height: 50px" name="comments" placeholder="Additional Comments"></textarea><br>
+				<br>
+				<input class="button" type="button" name="submit" value="Submit" onclick="submitForm()">
+			</form>
+		</div>
+		
+		<div class="footer">
+			<footer style="bottom: 0px">
+			
+				<p>&copy 2018 Geek God. All rights reserved 
+			</footer>
+		</div>
+		</div>
+		<script src="feedback.js"></script>
+		<script src="validations.js"></script>
+		
+	</body>
+</html>
+			
